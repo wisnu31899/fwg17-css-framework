@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Sacramento', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- rgba(11, 9, 9, 0.13) -->
+    <nav id="navbar"
+    class="shadow bg-[rgba(11, 9, 9, 0.13)] fixed fill-[#FFFFFF] text-[#FFFFFF] px-20 h-[60px] py-4 md:py-[30px] flex flex-col gap-10 md:gap-0 md:flex-row items-center md:h-20 md:absolute w-full">
+    <div class="flex flex-col md:flex-row flex-1 w-full gap-10 md:gap-0">
+        <div class="text-xl font-bold flex justify-between mt-3 md:mt-0">
+            <div class="flex gap-[10px] md:gap-[20px]">
+                <i class="fill-[#FFFFFF]" data-feather="coffee"></i>
+                <h1>Coffee Shop</h1>
+            </div>
+            <ul class="flex gap-10 md:hidden">
+                <li><i data-feather="shopping-cart"></i></li>
+                <li><button onclick="showMenu()"><i data-feather="menu"></i></button></li>
+            </ul>
+        </div>
+        <ul id="menuItems2" class="hidden md:flex flex-col md:flex-row gap-5 flex-1 justify-center items-center md:items-start w-full">
+            <li class="w-full md:w-auto"><a class="hover:border-b-2 pb-2 -mt-2 hover:border-orange-500" href="#">Home</a></li>
+            <li class="w-full md:w-auto"><a class="hover:border-b-2 pb-2 -mt-2 hover:border-orange-500" href="#">Product</a></li>
+        </ul>
+    </div>
+    <div id="menuItems1" class="hidden flex-1 md:flex w-full">
+        <ul class="flex flex-col md:flex-row md:justify-end gap-[20px] items-center w-full">
+            <li class="w-full md:w-auto hidden md:block"><a href="#"><i data-feather="search"></i></a></li>
+            <li class="w-full md:w-auto hidden md:block"><a href="#"><i data-feather="shopping-cart"></i></a></li>
+            <li class="w-full md:w-auto"><button class="px-5 py-2 bg-transparent border border-white rounded w-full">Sign In</button></li>
+            <li class="w-full md:w-auto"><button class="px-5 py-2 bg-orange-500 border border-orange-500 rounded w-full">Sign Up</button></li>
+        </ul>
+    </div>
+</nav>
+    <header class="flex flex-col-reverse md:flex-row h-screen">
+        <div class="flex-1 flex justify-center items-center bg-gradient-to-b from-gray-600 to-black">
+            <div class="flex flex-col max-w-[70%] text-white gap-5">
+                <div class="text-[36px] font-bold">Start Your day with Coffee and Good Meals</div>
+                <div>We provide high quality beans, good taste, and healthy meals made by love just for you. Start your
+                    day with us for a bigger smile!</div>
+                <div><button class="w-[140px] h-[50px] bg-[#FF8906] text-black font-bold" type="submit"><a href="./product.html">Get Started</a></button></div>
+                <div class="flex justify-between divide-x">
+                    <div class="flex items-center flex-col flex-1">
+                        <div class="text-3xl font-bold text-[#FF8906]">90+</div>
+                        <div>Staff</div>
+                    </div>
+                    <div class="flex items-center flex-col flex-1">
+                        <div class="text-3xl font-bold text-[#FF8906]">30+</div>
+                        <div>Stores</div>
+                    </div>
+                    <div class="flex items-center flex-col flex-1">
+                        <div class="text-3xl font-bold text-[#FF8906]">800+</div>
+                        <div>Costumer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 flex items-center justify-center bg-[url(/asset/image/bg-homehead.png)] bg-cover bg-no-repeat bg-center">
+            <div id="chat" class="hidden px-[20px] py-[20px] flex flex-col gap-[20px] bg-[white] max-w-3xl h-[450px] border-t-[20px] rounded-[10px] border-[#FF8906]">
+                <div class="flex gap-[15px]">
+                    <div><img src="./asset/icon/Ellipse 183.svg" alt=""></div>
+                    <div class="flex flex-col">
+                        <div class="font-bold">Maria Angela</div>
+                        <div class="text-[#FF8906]">Admin Support</div>
+                    </div>
+                </div>
+                <div><hr></div>
+                <div class="flex items-center gap-[10px]">
+                    <div><img src="./asset/icon/Ellipse 184.svg" alt=""></div>
+                    <div class="bg-gray-300 py-[5px] px-[10px] rounded-[10px]">Hallo, Ada yang bisa saya bantu?</div>
+                </div>
+                <div class="flex items-center gap-[10px] self-end">
+                    <div class="bg-gray-300 py-[5px] px-[10px] rounded-[10px]">Saya kesulitan mencari kopi</div>
+                    <div><img src="./asset/icon/Ellipse 185.svg" alt=""></div>
+                </div>
+                <div class="flex w-full gap-[10px] items-center mt-[150px] ">
+                    <div class="flex-1"><form class="w-full" action=""><input class=" rounded-[8px] w-full h-[45px] px-[15px] border-2" type="text" placeholder="Masukan Pesan Anda" name="message" id="message"></form></div>
+                    <div class=" bg-[#FF8906] rounded-[8px] flex justify-center items-center w-[45px] h-[45px]" ><i  data-feather="send"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="flex flex-col-reverse md:flex-row h-[1000px] md:h-screen">
+        <div class="flex-1 flex justify-center items-center">
+            <div class="flex flex-col gap-[25px] max-w-[70%] text-[#4F5665]">
+                <div class="flex justify-center items-center gap-[20px]">
+                    <div class="h-[68px] w-[10px] bg-[#FF8906]"></div>
+                    <div class="text-[#0B132A] font-bold text-[38px]">We Provide <span class="text-[#8E6447]">Good
+                            Coffee</span> and <span class="text-[#8E6447]">Healthy Meals</span></div>
+                </div>
+                <div>You can explore the menu that we provide with fun and have their own taste and make your day
+                    better.</div>
+                <div class="flex gap-[10px] text-[14px]"><i class="bg-[#2FAB73] rounded-full text-[white]"
+                        data-feather="check"></i>High quality beans</div>
+                <div class="flex gap-[10px] text-[14px]"><i class="bg-[#2FAB73] rounded-full text-[white]"
+                        data-feather="check"></i>Healthy meals, you can request the ingredients</div>
+                <div class="flex gap-[10px] text-[14px]"><i class="bg-[#2FAB73] rounded-full text-[white]"
+                        data-feather="check"></i>Chat with our staff to get better experience for ordering</div>
+                <div class="flex gap-[10px] text-[14px]"><i class="bg-[#2FAB73] rounded-full text-[white]"
+                        data-feather="check"></i>Free member card with a minimum purchase of IDR 200.000.</div>
+            </div>
+        </div>
+        <div class="flex-1  bg-[url(/asset/image/bg-homesec1.png)] bg-cover bg-no-repeat bg-center"></div>
+    </section>
+    <section class="h-[1700px] md:h-screen flex justify-center text-[#4F5665] md:my-[50px]">
+        <div class="max-w-[90%] flex flex-col justify-center items-center gap-[25px]">
+            <div class="text-[#0B132A] text-[48px] font-bold">Here is People's <span
+                    class="text-[#8E6447]">Favorite</span></div>
+            <div class="h-[7px] w-[68px] text-[white] bg-[#FF8906]">a</div>
+            <div>Let's choose and have a bit taste of poeple's favorite. It might be yours too!</div>
+            <div class="flex flex-col md:flex-row gap-[40px]">
+                <div class="flex flex-col">
+                    <div><img class="w-[100%]" src="./asset/image/sec2-box1.png" alt=""></div>
+                    <div class="flex justify-center items-center">
+                        <div class="flex items-center justify-center bg-[white] w-[90%] -mt-[80px]">
+                            <div class="flex flex-col gap-[10px] mx-[15px] my-[25px]">
+                                <div class="text-[24px] font-bold text-[#0B132A]">Hazelnut Latte</div>
+                                <div>You can explore the menu that we provide with fun and have their own taste and make
+                                    your
+                                    day better.</div>
+                                <div class="text-[22px] text-[#FF8906]">IDR 20.000</div>
+                                <div class="flex items-center justify-between gap-[10px]">
+                                    <div class="flex-1"><button
+                                            class="rounded-md font-bold border-none bg-[#FF8906] text-[black] h-[35px] w-full"
+                                            type="submit"><a href="./detail-product.html">Buy</a></button></div>
+                                    <div class="w-[60px]"><button
+                                            class="rounded-md flex border-[#FF8906] text-[#FF8906] justify-center items-center border-2 h-[35px] w-full"
+                                            type="submit"><i data-feather="shopping-cart"><a href="./detail-product.html"></a></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div><img class="w-[100%]" src="./asset/image/sec2-box2.png" alt=""></div>
+                    <div class="flex justify-center items-center">
+                        <div class="flex items-center justify-center bg-[white] w-[90%] -mt-[80px]">
+                            <div class="flex flex-col gap-[10px] mx-[15px] my-[25px]">
+                                <div class="text-[24px] font-bold text-[#0B132A]">Hazelnut Latte</div>
+                                <div>You can explore the menu that we provide with fun and have their own taste and make
+                                    your
+                                    day better.</div>
+                                <div class="text-[22px] text-[#FF8906]">IDR 20.000</div>
+                                <div class="flex items-center justify-between gap-[10px]">
+                                    <div class="flex-1"><button
+                                            class="rounded-md font-bold border-none bg-[#FF8906] text-[black] h-[35px] w-full"
+                                            type="submit"> Buy</button></div>
+                                    <div class="w-[60px]"><button
+                                            class="rounded-md flex border-[#FF8906] text-[#FF8906] justify-center items-center border-2 h-[35px] w-full"
+                                            type="submit"><i data-feather="shopping-cart"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex flex-col hidden">
+                    <div><img class="w-[100%]" src="./asset/image/sec2-box3.png" alt=""></div>
+                    <div class="flex justify-center items-center">
+                        <div class="flex items-center justify-center bg-[white] w-[90%] -mt-[80px]">
+                            <div class="flex flex-col gap-[10px] mx-[15px] my-[25px]">
+                                <div class="text-[24px] font-bold text-[#0B132A]">Hazelnut Latte</div>
+                                <div>You can explore the menu that we provide with fun and have their own taste and make
+                                    your
+                                    day better.</div>
+                                <div class="text-[22px] text-[#FF8906]">IDR 20.000</div>
+                                <div class="flex items-center justify-between gap-[10px]">
+                                    <div class="flex-1"><button
+                                            class="rounded-md font-bold border-none bg-[#FF8906] text-[black] h-[35px] w-full"
+                                            type="submit"> Buy</button></div>
+                                    <div class="w-[60px]"><button
+                                            class="rounded-md flex border-[#FF8906] text-[#FF8906] justify-center items-center border-2 h-[35px] w-full"
+                                            type="submit"><i data-feather="shopping-cart"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex flex-col hidden">
+                    <div><img class="w-[100%]" src="./asset/image/sec2-box4.png" alt=""></div>
+                    <div class="flex justify-center items-center">
+                        <div class="flex items-center justify-center bg-[white] w-[90%] -mt-[80px]">
+                            <div class="flex flex-col gap-[10px] mx-[15px] my-[25px]">
+                                <div class="text-[24px] font-bold text-[#0B132A]">Hazelnut Latte</div>
+                                <div>You can explore the menu that we provide with fun and have their own taste and make
+                                    your
+                                    day better.</div>
+                                <div class="text-[22px] text-[#FF8906]">IDR 20.000</div>
+                                <div class="flex items-center justify-between gap-[10px]">
+                                    <div class="flex-1"><button
+                                            class="rounded-md font-bold border-none bg-[#FF8906] text-[black] h-[35px] w-full"
+                                            type="submit"> Buy</button></div>
+                                    <div class="w-[60px]"><button
+                                            class="rounded-md flex border-[#FF8906] text-[#FF8906] justify-center items-center border-2 h-[35px] w-full"
+                                            type="submit"><i data-feather="shopping-cart"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="h-[600px] md:h-screen flex justify-center text-[#4F5665] md:my-[100px]">
+        <div class="max-w-[80%] flex flex-col justify-center items-center gap-[25px]">
+            <div class="text-[#0B132A] text-[48px] font-bold"><span class="text-[#8E6447]">Visit Our Store</span> in the
+                Spot on the Map Below</div>
+            <div class="h-[7px] w-[68px] text-[white] bg-[#FF8906]">p</div>
+            <div>You can explore the menu that we provide with fun and have their own taste and make your day better.
+            </div>
+            <div><img src="./asset/image/bg-homesec3.png" alt=""></div>
+        </div>
+    </section>
+    <section class="md:mt-[0px] mt-[100px] h-[900px] md:h-screen flex text-[white] bg-gradient-to-b from-gray-600 to-black gap-[20px]">
+        <div class="flex-1 hidden md:flex justify-end items-center">
+            <div><img src="./asset/image/bg-homesec4.png" alt=""></div>
+        </div>
+        <div class="flex-1 flex md:justify-start justify-center items-center">
+            <div class="flex flex-col justify-center gap-[25px] w-[80%]">
+                <div class="text-[16px] font-bold">TESTIMONI</div>
+                <div class="md:hidden"><img src="./asset/image/bg-homesec4.png" alt=""></div>
+                <div class="flex items-center gap-[20px]">
+                    <div class="w-[7px] h-[68px] text-[white] bg-[#FF8906]"></div>
+                    <div class="text-[48px] font-bold">Viezh Robert</div>
+                </div>
+                <div class="text-[#FF8906]">Manager Coffe Shop</div>
+                <div>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals
+                    tho. I like it here!! Very recommended!</div>
+                <div class="flex gap-[30px]">
+                    <div><i class="text-[#FF8906] fill-[#FF8906]" data-feather="star"></i></div>
+                    <div><i class="text-[#FF8906] fill-[#FF8906]" data-feather="star"></i></div>
+                    <div><i class="text-[#FF8906] fill-[#FF8906]" data-feather="star"></i></div>
+                    <div><i class="text-[#FF8906] fill-[#FF8906]" data-feather="star"></i></div>
+                    <div>5.0</div>
+                </div>
+                <div class="flex gap-[10px]">
+                    <div><button type="submit"><i class="text-[black] fill-[#FF8906] w-[40px] h-[40px]"
+                                data-feather="arrow-left-circle"></i></button></div>
+                    <div><button class="text-[#FF8906]" type="submit"><i
+                                class="text-[black] fill-[#FF8906] w-[40px] h-[40px]"
+                                data-feather="arrow-right-circle"></i></button></div>
+                </div>
+                <div class="flex gap-[20px]">
+                    <div><i class="fill-[#DDE0E4] text-[#DDE0E4] w-[20px] h-[20px]" data-feather="circle"></i></div>
+                    <div><i class="fill-[#DDE0E4] text-[#DDE0E4] w-[20px] h-[20px]" data-feather="circle"></i></div>
+                    <div><i class="fill-[#DDE0E4] text-[#DDE0E4] w-[20px] h-[20px]" data-feather="circle"></i></div>
+                    <div><i class="fill-[#DDE0E4] text-[#DDE0E4] w-[20px] h-[20px]" data-feather="circle"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="gap-[20px] flex flex-col md:flex-row justify-between text-[#4F5665] py-[50px] bg-[#F8F8F8]">
+        <div class="max-w-[500px] flex justify-center">
+            <div class="flex flex-col w-[78%] md:w-[70%] gap-[30px]">
+                <div class="flex items-center text-[#8E6447] gap-[10px]">
+                    <div><i class="fill-[#8E6447] " data-feather="coffee"></i></div>
+                    <div>
+                        <h1 class="text-[20px] font-bold">Coffee Shop</h1>
+                    </div>
+                </div>
+                <div>Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality
+                    beans</div>
+                <div class="text-[#AFB5C0]">©2020CoffeeStore</div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[10px]">
+                <div class="mb-[10px] text-[black] font-bold">Product</div>
+                <div><a class="hover:text-[#FF8906]" href="#">Our Product</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Pricing</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Locations</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Countries</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Blog</a></div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[10px]">
+                <div class="mb-[10px] text-[black] font-bold">Engage</div>
+                <div><a class="hover:text-[#FF8906]" href="#">Patner</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">FAQ</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">About Us</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Privacy Policy</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Terms of Service</a></div>
+            </div>
+        </div>
+        <div class=" flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[20px]">
+                <div class="text-[black] font-bold">Social Media</div>
+                <div class="flex gap-[20px]">
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black] fill-[black]" data-feather="facebook"></i></button>
+                    </div>
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black] fill-[black]" data-feather="twitter"></i></button>
+                    </div>
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black]" data-feather="instagram"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div>
+        <div onclick="showChat()" class="fixed bottom-10 right-10 bg-[#FF8906] w-24 h-24 rounded-full flex justify-center items-center"><a
+                href="#"><i class="w-[34px] h-[34px]" data-feather="message-circle"></i></a></div>
+    </div>
+    <script>
+        feather.replace();
+        function showMenu() {
+            const navbar = document.getElementById('navbar')
+            // console.log(navbar.classList)
+            if (navbar.classList.contains('h-[60px]')) {
+                navbar.classList.remove('h-[60px]')
+            } else {
+                navbar.classList.add('h-[60px]')
+            }
+                        
+            const menuItems1 = document.getElementById('menuItems1')
+            menuItems1.classList.toggle('hidden');
+            console.log(menuItems1.classList)
+            const menuItems2 = document.getElementById('menuItems2')
+            menuItems2.classList.toggle('hidden');
+        }
+        // function showChat() {
+        //     const popUp = document.getElementById('chat')
+        //     console.log(popUp.classList)
+        //     if (popUp.classList.contains('hidden') && popUp.classList.contains('flex')) {
+        //         popUp.classList.remove('hidden');
+        //     } else {
+        //         popUp.classList.add('flex')
+        //         if(popUp.classList.contains('hidden') && popUp.classList.contains('flex')){
+        //             popUp.classList.remove('flex');
+        //         }else{
+        //             popUp.classList.add('hidden')
+        //         }
+        //     }
+        // }
+        function showChat() {
+            const popUp = document.getElementById('chat')
+            popUp.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

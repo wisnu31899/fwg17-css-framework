@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1{
+            font-family: 'Sacramento', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="h-screen flex">
+        <div class="hidden md:block w-2/6 bg-[url(/asset/image/bg-login.png)] bg-cover bg-no-repeat bg-center"></div>
+        <div class=" flex flex-1 justify-center items-center">
+            <form class="w-4/5 flex flex-col gap-5" action="">
+                <div class="flex gap-5">
+                    <div><i class="fill-[#8E6447] text-[#8E6447]" data-feather="coffee"></i></div>
+                    <div><h1 class="text-[#8E6447] font-bold text-4xl">Coffee Shop</h1></div>
+                </div>
+                <div class="text-[#8E6447] font-bold">Login</div>
+                <div class="text-[#4F5665]">Fill out the form correctly</div>
+                <div class="flex gap-3 flex-col">
+                    <label class="text-[#0B132A] font-bold" for="email">Email</label>
+                    <input class="text-[#4F5665] border-solid border-2 rounded-lg px-16 py-3" for="email" id="email" type="email" placeholder="Enter Your Email">
+                    <div class="text-[#4F5665] -mt-[40px] ml-4" ><i data-feather="mail"></i></div>
+                </div>
+                <div class="flex gap-3 flex-col">
+                    <label class="mt-3 text-[#0B132A] font-bold" for="password">Password</label>
+                    <input class="text-[#4F5665] border-solid border-2 rounded-lg px-16 py-3" for="password" id="password" type="password" placeholder="Enter Your Password">
+                    <div class="text-[#4F5665] -mt-[40px] ml-4" ><i data-feather="lock"></i></div>
+                </div>
+                <div class="mt-3 flex justify-end"><a class="text-orange-500" href="./forgot-password.html">Lupa Password?</a></div>
+                <div><a href="/product.html"><button class="py-4 bg-orange-500 w-full font-bold" type="submit">Login</button></a></div>
+                <div class="flex justify-center">
+                    <div class="text-[#4F5665]">Note Have An Account? <a href="./register.html" class="text-orange-500">Register</a></div>
+                </div>
+                <div class="flex items-center -mt-3">
+                    <div class="flex-1 w-full h-px bg-[#DEDEDE]"></div>
+                    <p class="flex-1 text-center text-[#4F5665]">Or</p>
+                    <div class="flex-1 w-full h-px bg-[#DEDEDE]"></div>
+                </div>
+                <div class="flex gap-5 justify-between">
+                    <div class="flex-1">
+                        <button class="shadow w-full py-5 rounded-2xl flex gap-3  justify-center bg-[#FFF] text-[#4F5665]"><i data-feather="facebook"></i>Facebook</button>
+                    </div>
+                    <div class="flex-1">
+                        <button class="shadow w-full py-5 rounded-2xl justify-center gap-3 flex bg-[#FFF] text-[#4F5665]"><i data-feather="link"></i>Google</button>
+                    </div>
+            </form>
+        </div>
+    </header>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

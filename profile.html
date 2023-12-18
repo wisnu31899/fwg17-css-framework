@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Sacramento', cursive;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- rgba(11, 9, 9, 0.13) -->
+    <nav id="navbar"
+    class="bg-black bg-[rgba(0,0,0,0,5)] text-white px-20 h-[60px] py-4 md:py-[30px] flex flex-col gap-10 md:gap-0 md:flex-row items-center md:h-20 md:absolute w-full">
+    <div class="flex flex-col md:flex-row flex-1 w-full gap-10 md:gap-0">
+        <div class="text-xl font-bold flex justify-between mt-3 md:mt-0">
+            <div class="flex gap-[10px] md:gap-[20px]">
+                <i class="fill-[#FFFFFF]" data-feather="coffee"></i>
+                <h1>Coffee Shop</h1>
+            </div>
+            <ul class="flex gap-10 md:hidden">
+                <li><i data-feather="shopping-cart"></i></li>
+                <li><button onclick="showMenu()"><i data-feather="menu"></i></button></li>
+            </ul>
+        </div>
+        <ul id="menuItems2" class="hidden md:flex flex-col md:flex-row gap-5 flex-1 justify-center items-center md:items-start w-full">
+            <li class="w-full md:w-auto"><a class="hover:border-b-2 pb-2 -mt-2 hover:border-orange-500" href="#">Home</a></li>
+            <li class="w-full md:w-auto"><a class="hover:border-b-2 pb-2 -mt-2 hover:border-orange-500" href="#">Product</a></li>
+        </ul>
+    </div>
+    <div id="menuItems1" class="hidden flex-1 md:flex w-full">
+        <ul class="flex flex-col md:flex-row md:justify-end gap-[20px] items-center w-full">
+            <li class="w-full md:w-auto hidden md:block"><a href="#"><i data-feather="search"></i></a></li>
+            <li class="w-full md:w-auto hidden md:block"><a href="#"><i data-feather="shopping-cart"></i></a></li>
+            <li class="w-full md:w-auto"><button class="px-5 py-2 bg-transparent border border-white rounded w-full">Sign In</button></li>
+            <li class="w-full md:w-auto"><button class="px-5 py-2 bg-orange-500 border border-orange-500 rounded w-full">Sign Up</button></li>
+        </ul>
+    </div>
+</nav>
+    <header class="pt-[50px] md:pt-[100px] flex items-center flex-col h-[1200px] md:h-[850px] text-[#4F5665]">
+        <div class=" gap-[20px] flex flex-col md:flex-row max-w-[80%] w-full">
+            <div class="max-w-[280px] w-full flex flex-col">
+                <div class="text-[#0B0909] text-[48px]">Profile</div>
+                <div
+                    class="gap-[10px] flex flex-col justify-center items-center max-w-[280px] w-full border-2 p-[10px]">
+                    <div class="text-[#0B132A] text-[22px]">Galuh Wizard</div>
+                    <div>ghaluhwizz@gmail.com</div>
+                    <div><img src="./asset/icon/exam-profile.svg" alt=""></div>
+                    <button class="bg-[#FF8906] py-[12px] px-[18px] text-[#0B0909]">Upload New Photo</button>
+                    <div>Since 20 January 2022</div>
+                </div>
+            </div>
+            <div class=" md:mt-[70px] border-2 px-[20px] py-[20px] flex-1">
+                <form class="flex flex-col gap-[25px]" action="">
+                    <label class="flex flex-col gap-[5px]" for="name">
+                        <div class="text-[#0B132A] font-bold">Full Name</div>
+                        <div class="border h-[50px] rounded flex items-center px-4 gap-2">
+                            <i data-feather="user"></i>
+                        <input class="w-full text-[black]" type="text" id="name" name="name"
+                            placeholder="Ghaluh Wizard">
+                        </div>
+                    </label>
+                    <label class="flex flex-col gap-[5px]" for="email">
+                        <div  class="text-[#0B132A] font-bold">Email</div>
+                        <div class="border h-[50px] rounded flex items-center px-4 gap-2">
+                            <i data-feather="at-sign"></i>
+                        <input class="w-full text-[black]" type="email" id="email" name="email"
+                            placeholder="ghaluhwizz@gmail.com">
+                        </div>
+                    </label>
+                    <label class="flex flex-col gap-[5px]" for="phone">
+                        <div  class="text-[#0B132A] font-bold">Phone</div>
+                        <div class="border h-[50px] rounded flex items-center px-4 gap-2">
+                            <i data-feather="phone-call"></i>
+                        <input class="w-full text-[black]" type="number" id="phone" name="phone"
+                            placeholder="082116304338">
+                        </div>
+                    </label>
+                    <label class="flex flex-col gap-[5px]" for="password">
+                        <div class="flex justify-between">
+                            <div class="text-[#0B132A] font-bold">Password</div>
+                            <div><a class="text-[#FF8906]" href="#">Set New Password</a></div>
+                        </div>
+                        <div class="border h-[50px] rounded flex items-center px-4 gap-2">
+                            <i data-feather="key"></i>
+                        <input class="w-full text-[black]" type="password" id="password" name="password"
+                            placeholder="**********">
+                        </div>
+                    </label>
+                    <label class="flex flex-col gap-[5px]" for="address">
+                        <div  class="text-[#0B132A] font-bold">Address</div>
+                        <div class="border h-[50px] rounded flex items-center px-4 gap-2">
+                            <i data-feather="map-pin"></i>
+                        <input class="w-full text-[black]" type="text" id="address" name="address"
+                            placeholder="Griya Bandung Indah">
+                        </div>
+                    </label>
+                    <button class="font-bold w-full bg-[#FF8906] text-[#0B132A] py-[12px]
+                    px-[18px]" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <footer class="gap-[20px] flex flex-col md:flex-row justify-between text-[#4F5665] py-[50px] bg-[#F8F8F8]">
+        <div class="max-w-[500px] flex justify-center">
+            <div class="flex flex-col w-[78%] md:w-[70%] gap-[30px]">
+                <div class="flex items-center text-[#8E6447] gap-[10px]">
+                    <div><i class="fill-[#8E6447] " data-feather="coffee"></i></div>
+                    <div>
+                        <h1 class="text-[20px] font-bold">Coffee Shop</h1>
+                    </div>
+                </div>
+                <div>Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality
+                    beans</div>
+                <div class="text-[#AFB5C0]">©2020CoffeeStore</div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[10px]">
+                <div class="mb-[10px] text-[black] font-bold">Product</div>
+                <div><a class="hover:text-[#FF8906]" href="#">Our Product</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Pricing</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Locations</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Countries</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Blog</a></div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[10px]">
+                <div class="mb-[10px] text-[black] font-bold">Engage</div>
+                <div><a class="hover:text-[#FF8906]" href="#">Patner</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">FAQ</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">About Us</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Privacy Policy</a></div>
+                <div><a class="hover:text-[#FF8906]" href="#">Terms of Service</a></div>
+            </div>
+        </div>
+        <div class=" flex-1 flex justify-center">
+            <div class="flex flex-col w-[80%] gap-[20px]">
+                <div class="text-[black] font-bold">Social Media</div>
+                <div class="flex gap-[20px]">
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black] fill-[black]" data-feather="facebook"></i></button>
+                    </div>
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black] fill-[black]" data-feather="twitter"></i></button>
+                    </div>
+                    <div><button
+                            class="h-[35px] w-[35px] border-2 border-[#FF8906] hover:bg-[#FF8906] rounded-full flex justify-center items-center"
+                            type="submit"><i class="text-[black]" data-feather="instagram"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+        function showMenu() {
+            const navbar = document.getElementById('navbar')
+            console.log(navbar.classList)
+            if (navbar.classList.contains('h-[60px]')) {
+                navbar.classList.remove('h-[60px]')
+            } else {
+                navbar.classList.add('h-[60px]')
+            }
+                        
+            const menuItems1 = document.getElementById('menuItems1')
+            menuItems1.classList.toggle('hidden');
+            const menuItems2 = document.getElementById('menuItems2')
+            menuItems2.classList.toggle('hidden');
+        }
+        // function showChat() {
+        //     const popUp = document.getElementById('chat')
+        //     console.log(popUp.classList)
+        //     if (popUp.classList.contains('hidden') && popUp.classList.contains('flex')) {
+        //         popUp.classList.remove('hidden');
+        //     } else {
+        //         popUp.classList.add('flex')
+        //         if(popUp.classList.contains('hidden') && popUp.classList.contains('flex')){
+        //             popUp.classList.remove('flex');
+        //         }else{
+        //             popUp.classList.add('hidden')
+        //         }
+        //     }
+        // }
+        function showChat() {
+            const popUp = document.getElementById('chat')
+            popUp.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
